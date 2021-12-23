@@ -8,8 +8,21 @@ def afficher_jeu(nombre_allumettes):
     :type nombre_allumettes: int.
     """
     # À implémenter.
-    pass
+    print ("Avec combien d'allumettes vouler vous jouer ?: ")
+    nombre_allumettes = input ()
+    nombre_allumettes = str ()
+    nombre_allumettes = int()
+    
+    if nombre_allumettes:
+        nombre_allumettes < 4
+    else:
+        print ("false")
+    if nombre_allumettes > 5:
+        nombre_allumettes > 5
+    else:
+        print ("")
 
+        return (nombre_allumettes)
 
 def prise_ia(nombre_allumettes, gagnant_dernier):
     """Implémentation de la statégie gagnante : donne le nombre
