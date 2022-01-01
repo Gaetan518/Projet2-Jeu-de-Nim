@@ -48,13 +48,13 @@ def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):
 def afficher_message_bienvenue():
     """Affiche le message de bienvenue."""
     # À implémenter.
-    pass
+      print("Bienvenue.")
 
 
 def afficher_message_fin():
     """Affiche le message de fin."""
     # À implémenter.
-    pass
+   print("Fin de partie.")
 
 
 def reponse_oui_non(question):
