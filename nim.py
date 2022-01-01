@@ -8,8 +8,7 @@ def afficher_jeu(nombre_allumettes):                 #Matthias
     :type nombre_allumettes: int.
     """
     # À implémenter.
-    pass
-
+ 
 
 def prise_ia(nombre_allumettes, gagnant_dernier):                #Matthias 
     """Implémentation de la statégie gagnante : donne le nombre
@@ -25,7 +24,7 @@ def prise_ia(nombre_allumettes, gagnant_dernier):                #Matthias
     :rtype: int.
     """
     # À implémenter.
-    pass
+  
 
 
 def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):                #Gaëtan
@@ -42,7 +41,7 @@ def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):                #Ga�
     :type ia_joueur_2: bool.
     """
     # À implémenter.
-    pass
+  
 
 
 def afficher_message_bienvenue():
@@ -68,8 +67,7 @@ def reponse_oui_non(question):                                            #Alber
     :rtype: bool.
     """
     # À implémenter.
-    pass
-
+  
 
 def reponse_entier(question, vmin, vmax):                               #Gaëtan   #Albert
     """Pose une question à l'utilisateur dont la réponse est un entier
@@ -86,7 +84,7 @@ def reponse_entier(question, vmin, vmax):                               #Gaëtan
     :rtype: int.
     """
     # À implémenter.
-    pass
+  
 
 
 def jouer():
