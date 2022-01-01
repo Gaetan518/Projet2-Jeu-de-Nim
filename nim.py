@@ -1,7 +1,7 @@
 #! /usr/bin/env python3
 
 
-def afficher_jeu(nombre_allumettes):
+def afficher_jeu(nombre_allumettes):                 #Matthias 
     """Affiche le plateau du jeu.
 
     :param nombre_allumettes: doit être positif ou nul.
@@ -11,7 +11,7 @@ def afficher_jeu(nombre_allumettes):
     pass
 
 
-def prise_ia(nombre_allumettes, gagnant_dernier):
+def prise_ia(nombre_allumettes, gagnant_dernier):                #Matthias 
     """Implémentation de la statégie gagnante : donne le nombre
     d'allumettes à prendre en fonction de nombre restant et de la
     variante du jeu.
@@ -28,7 +28,7 @@ def prise_ia(nombre_allumettes, gagnant_dernier):
     pass
 
 
-def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):
+def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):                #Gaëtan
     """Une seule partie du jeu de Nim.
 
     :param nombre_allumettes: nombre d'allumettes au début de la partie,
@@ -57,7 +57,7 @@ def afficher_message_fin():
    print("Fin de partie.")
 
 
-def reponse_oui_non(question):
+def reponse_oui_non(question):                                            #Albert
     """Pose une question binaire (oui/non) à l'utilisateur qui répond
     soit 'o', soit 'n' (éventuellement 'O' ou 'N').
     La question est reposée tant que la réponse n'est pas comprise.
@@ -71,7 +71,7 @@ def reponse_oui_non(question):
     pass
 
 
-def reponse_entier(question, vmin, vmax):
+def reponse_entier(question, vmin, vmax):                               #Gaëtan   #Albert
     """Pose une question à l'utilisateur dont la réponse est un entier
     compris dans l'intervalle [vmin ; vmax]. vmin >= 0.
     La question est reposée tant que la réponse n'est pas correcte.
