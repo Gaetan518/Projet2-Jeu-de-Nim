@@ -111,10 +111,6 @@ def reponse_entier(question, vmin, vmax):                               #Gaëtan
     """
 
   
-    vmin >= 0
-    vmax >= vmin 
-    question = str(input("Entrez un nombre compris entre",vmin,"et",vmax))
-    return reponse_entier
 
 
 def jouer():
