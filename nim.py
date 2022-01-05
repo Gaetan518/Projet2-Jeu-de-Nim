@@ -93,6 +93,7 @@ def reponse_oui_non(question):                                            #Alber
     :rtype: bool.
     """
     # À implémenter.
+    #test
   
 
 def reponse_entier(question, vmin, vmax):                               #Gaëtan   #Albert
