@@ -7,7 +7,7 @@ def afficher_jeu(nombre_allumettes):                 #Matthias
     :param nombre_allumettes: doit être positif ou nul.
     :type nombre_allumettes: int.
     """
-    def afficher_jeu(nombre_allumettes):                 #Matthias 
+    def afficher_jeu(nombre_allumettes):                
     """Affiche le plateau du jeu.
     :param nombre_allumettes: doit être positif ou nul.
     :type nombre_allumettes: int.
