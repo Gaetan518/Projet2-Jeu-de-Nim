@@ -109,7 +109,13 @@ def reponse_entier(question, vmin, vmax):                               #Gaëtan
     :returns: l'entier choisi.
     :rtype: int.
     """
-
+    assert vmin >= 0, "vmin inférieur à 0" 
+    val = -1
+    while not vmin<=val<=vmax:
+        val = int(input(question))
+    print("Vous prenez",val,"allumettes")
+    return val    
+reponse_entier("Combien voulez-vous retirer d'allumettes ?", 1, 100) 
   
 
 
