@@ -7,21 +7,17 @@ def afficher_jeu(nombre_allumettes):                 #Matthias
     :param nombre_allumettes: doit être positif ou nul.
     :type nombre_allumettes: int.
     """
-    print ("Avec combien d'allumettes vouler vous jouer ?: ")
-    nombre_allumettes = input ()
-    nombre_allumettes = str ()
-    nombre_allumettes = int()
-    
-    if nombre_allumettes:
-        nombre_allumettes < 4
-    else:
-        print ("false")
-    if nombre_allumettes > 5:
-        nombre_allumettes > 5
-    else:
-        print ("")
+    def afficher_jeu(nombre_allumettes):                 #Matthias 
+    """Affiche le plateau du jeu.
+    :param nombre_allumettes: doit être positif ou nul.
+    :type nombre_allumettes: int.
+    """
+    assert nombre_allumettes >=0, "nombre allumette inférieur à 0"
+    if nombre_allumettes >=0 :
+        print ("|"*nombre_allumettes)
 
-        return (nombre_allumettes)
+nombre_allumettes = 4
+afficher_jeu(nombre_allumettes)
  
 
 def prise_ia(nombre_allumettes, gagnant_dernier):                #Matthias 
