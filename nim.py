@@ -42,7 +42,19 @@ def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):                #Ga�
     """
     # À implémenter.
   
-
+      nombre_allumettes = reponses_entier(question, vmin, vmax)
+    gagnant_dernier = int(input("Celui qui prends la dernière allumette est la gagnant?"))
+    for i in enumerate:
+        if "Oui" in gagnant_dernier:
+            print("Question suivante")
+        else:
+            int(input("Celui qui prends la dernière allumette est la gagnant?"))
+    ia_joueur2 = int(input("Le joueur 2 est la machine ?")) 
+    for a in enumerate:
+            if "True" in ia_joueur2:
+                jouer()
+            else:
+                 afficher_message_fin()
 
 def afficher_message_bienvenue():
     """Affiche le message de bienvenue."""
@@ -85,6 +97,10 @@ def reponse_entier(question, vmin, vmax):                               #Gaëtan
     """
     # À implémenter.
   
+    vmin >= 0
+    vmax >= vmin 
+    question = str(input("Entrez un nombre compris entre",vmin,"et",vmax))
+    return reponse_entier
 
 
 def jouer():
