@@ -1,13 +1,12 @@
 #! /usr/bin/env python3
 
 
-def afficher_jeu(nombre_allumettes):
+def afficher_jeu(nombre_allumettes):                 #Matthias 
     """Affiche le plateau du jeu.
 
     :param nombre_allumettes: doit être positif ou nul.
     :type nombre_allumettes: int.
     """
-    # À implémenter.
     print ("Avec combien d'allumettes vouler vous jouer ?: ")
     nombre_allumettes = input ()
     nombre_allumettes = str ()
@@ -23,8 +22,9 @@ def afficher_jeu(nombre_allumettes):
         print ("")
 
         return (nombre_allumettes)
+ 
 
-def prise_ia(nombre_allumettes, gagnant_dernier):
+def prise_ia(nombre_allumettes, gagnant_dernier):                #Matthias 
     """Implémentation de la statégie gagnante : donne le nombre
     d'allumettes à prendre en fonction de nombre restant et de la
     variante du jeu.
@@ -38,10 +38,10 @@ def prise_ia(nombre_allumettes, gagnant_dernier):
     :rtype: int.
     """
     # À implémenter.
-    pass
+  
 
 
-def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):
+def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):                #Gaëtan
     """Une seule partie du jeu de Nim.
 
     :param nombre_allumettes: nombre d'allumettes au début de la partie,
@@ -55,22 +55,34 @@ def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):
     :type ia_joueur_2: bool.
     """
     # À implémenter.
-    pass
-
+  
+      nombre_allumettes = reponses_entier(question, vmin, vmax)
+    gagnant_dernier = int(input("Celui qui prends la dernière allumette est la gagnant?"))
+    for i in enumerate:
+        if "Oui" in gagnant_dernier:
+            print("Question suivante")
+        else:
+            int(input("Celui qui prends la dernière allumette est la gagnant?"))
+    ia_joueur2 = int(input("Le joueur 2 est la machine ?")) 
+    for a in enumerate:
+            if "True" in ia_joueur2:
+                jouer()
+            else:
+                 afficher_message_fin()
 
 def afficher_message_bienvenue():
     """Affiche le message de bienvenue."""
     # À implémenter.
-    pass
+      print("Bienvenue.")
 
 
 def afficher_message_fin():
     """Affiche le message de fin."""
     # À implémenter.
-    pass
+   print("Fin de partie.")
 
 
-def reponse_oui_non(question):
+def reponse_oui_non(question):                                            #Albert
     """Pose une question binaire (oui/non) à l'utilisateur qui répond
     soit 'o', soit 'n' (éventuellement 'O' ou 'N').
     La question est reposée tant que la réponse n'est pas comprise.
@@ -81,10 +93,9 @@ def reponse_oui_non(question):
     :rtype: bool.
     """
     # À implémenter.
-    pass
+  
 
-
-def reponse_entier(question, vmin, vmax):
+def reponse_entier(question, vmin, vmax):                               #Gaëtan   #Albert
     """Pose une question à l'utilisateur dont la réponse est un entier
     compris dans l'intervalle [vmin ; vmax]. vmin >= 0.
     La question est reposée tant que la réponse n'est pas correcte.
@@ -99,7 +110,11 @@ def reponse_entier(question, vmin, vmax):
     :rtype: int.
     """
     # À implémenter.
-    pass
+  
+    vmin >= 0
+    vmax >= vmin 
+    question = str(input("Entrez un nombre compris entre",vmin,"et",vmax))
+    return reponse_entier
 
 
 def jouer():
