@@ -92,9 +92,14 @@ def reponse_oui_non(question):                                            #Alber
     :returns: la réponse sous forme de booléen.
     :rtype: bool.
     """
-    # À implémenter.
-    #test
-  
+    liste = ["O,"o","N","n"]
+    reponse = input(question)
+    while reponse not in liste:
+            reponse = input(question)
+     if reponse == "O" or reponse == "o":
+            return(True)
+     else:
+            return(False)
 
 def reponse_entier(question, vmin, vmax):                               #Gaëtan   #Albert
     """Pose une question à l'utilisateur dont la réponse est un entier
