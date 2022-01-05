@@ -41,7 +41,7 @@ def prise_ia(nombre_allumettes, gagnant_dernier):                #Matthias
   
 
 
-def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):                #Gaëtan
+def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):                #Gaëtan   #Albert
     """Une seule partie du jeu de Nim.
 
     :param nombre_allumettes: nombre d'allumettes au début de la partie,
@@ -56,7 +56,7 @@ def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):                #Ga�
     """
 
   
-    nombre_allumettes = reponses_entier(question, vmin, vmax)
+    nombre_allumettes = reponses_entier("Combien voulez-vous retirer d'allumettes ?", 1, 100) 
     gagnant_dernier = int(input("Celui qui prends la dernière allumette est la gagnant?"))
     for i in enumerate:
         if "Oui" in gagnant_dernier:
