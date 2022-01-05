@@ -7,21 +7,14 @@ def afficher_jeu(nombre_allumettes):                 #Matthias
     :param nombre_allumettes: doit être positif ou nul.
     :type nombre_allumettes: int.
     """
-    print ("Avec combien d'allumettes vouler vous jouer ?: ")
-    nombre_allumettes = input ()
-    nombre_allumettes = str ()
-    nombre_allumettes = int()
-    
-    if nombre_allumettes:
-        nombre_allumettes < 4
-    else:
-        print ("false")
-    if nombre_allumettes > 5:
-        nombre_allumettes > 5
-    else:
-        print ("")
-
-        return (nombre_allumettes)
+    def afficher_jeu(nombre_allumettes):                
+    """Affiche le plateau du jeu.
+    :param nombre_allumettes: doit être positif ou nul.
+    :type nombre_allumettes: int.
+    """
+    assert nombre_allumettes >=0, "nombre allumette inférieur à 0"
+    if nombre_allumettes >=0 :
+        print ("|"*nombre_allumettes)
  
 
 def prise_ia(nombre_allumettes, gagnant_dernier):                #Matthias 
@@ -37,11 +30,11 @@ def prise_ia(nombre_allumettes, gagnant_dernier):                #Matthias
     :returns: nombre d'allumettes à prendre.
     :rtype: int.
     """
-    # À implémenter.
+  
   
 
 
-def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):                #Gaëtan
+def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):                #Gaëtan   #Albert
     """Une seule partie du jeu de Nim.
 
     :param nombre_allumettes: nombre d'allumettes au début de la partie,
@@ -54,9 +47,9 @@ def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):                #Ga�
                   ou l'utilisateur (False).
     :type ia_joueur_2: bool.
     """
-    # À implémenter.
+
   
-      nombre_allumettes = reponses_entier(question, vmin, vmax)
+    nombre_allumettes = reponses_entier("Combien voulez-vous retirer d'allumettes ?", 1, 100) 
     gagnant_dernier = int(input("Celui qui prends la dernière allumette est la gagnant?"))
     for i in enumerate:
         if "Oui" in gagnant_dernier:
@@ -115,12 +108,14 @@ def reponse_entier(question, vmin, vmax):                               #Gaëtan
     :returns: l'entier choisi.
     :rtype: int.
     """
-    # À implémenter.
+    assert vmin >= 0, "vmin inférieur à 0" 
+    val = -1
+    while not vmin<=val<=vmax:
+        val = int(input(question))
+    print("Vous prenez",val,"allumettes")
+    return val    
+reponse_entier("Combien voulez-vous retirer d'allumettes ?", 1, 100) 
   
-    vmin >= 0
-    vmax >= vmin 
-    question = str(input("Entrez un nombre compris entre",vmin,"et",vmax))
-    return reponse_entier
 
 
 def jouer():
