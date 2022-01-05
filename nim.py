@@ -56,7 +56,7 @@ def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):                #Ga�
     """
     # À implémenter.
   
-      nombre_allumettes = reponses_entier(question, vmin, vmax)
+    nombre_allumettes = reponses_entier(question, vmin, vmax)
     gagnant_dernier = int(input("Celui qui prends la dernière allumette est la gagnant?"))
     for i in enumerate:
         if "Oui" in gagnant_dernier:
