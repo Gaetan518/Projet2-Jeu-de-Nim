@@ -37,7 +37,7 @@ def prise_ia(nombre_allumettes, gagnant_dernier):                #Matthias
     :returns: nombre d'allumettes à prendre.
     :rtype: int.
     """
-    # À implémenter.
+  
   
 
 
@@ -54,7 +54,7 @@ def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):                #Ga�
                   ou l'utilisateur (False).
     :type ia_joueur_2: bool.
     """
-    # À implémenter.
+
   
     nombre_allumettes = reponses_entier(question, vmin, vmax)
     gagnant_dernier = int(input("Celui qui prends la dernière allumette est la gagnant?"))
@@ -92,7 +92,7 @@ def reponse_oui_non(question):                                            #Alber
     :returns: la réponse sous forme de booléen.
     :rtype: bool.
     """
-    # À implémenter.
+   
   
 
 def reponse_entier(question, vmin, vmax):                               #Gaëtan   #Albert
@@ -109,7 +109,7 @@ def reponse_entier(question, vmin, vmax):                               #Gaëtan
     :returns: l'entier choisi.
     :rtype: int.
     """
-    # À implémenter.
+
   
     vmin >= 0
     vmax >= vmin 
