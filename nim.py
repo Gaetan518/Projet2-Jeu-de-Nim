@@ -1,7 +1,7 @@
 #! /usr/bin/env python3
 
 
-def afficher_jeu(nombre_allumettes):                 #Matthias 
+def afficher_jeu(nombre_allumettes):              
     """Affiche le plateau du jeu.
 
     :param nombre_allumettes: doit être positif ou nul.
@@ -44,34 +44,36 @@ def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):                #Ga�
     :type ia_joueur_2: bool.
     """
 
-  
-    nombre_allumettes = reponses_entier("Combien voulez-vous retirer d'allumettes ?", 1, 100) 
-    gagnant_dernier = int(input("Celui qui prends la dernière allumette est la gagnant?"))
-    for i in enumerate:
-        if "Oui" in gagnant_dernier:
-            print("Question suivante")
+  afficher_message_bienvenue() 
+gagnant_dernier = ("Le gagnant est celui qui prends la dernière allumette ?")
+ia_joueur2 = ("Le joueur 2 est la machine?")
+liste = ["O","o","N","n"] 
+reponse = input(gagnant_dernier)
+reponse2 = inût(ia_joueur2) 
+while reponse not in liste:
+    reponse = input(gagnant_dernier)
+    if reponse == "Oui" or reponse == "oui":
+        ia_joueur2 = int(input("Le joueur 2 est la machine ?"))
+    else:
+        reponse = input(gagnant_dernier)
+while ia_joueur2 not in liste:
+        ia_joueur2 = input(ia_joueur2)
+    if reponse == "Oui" or reponse == "oui":
+            jouer()
         else:
-            int(input("Celui qui prends la dernière allumette est la gagnant?"))
-    ia_joueur2 = int(input("Le joueur 2 est la machine ?")) 
-    for a in enumerate:
-            if "True" in ia_joueur2:
-                jouer()
-            else:
-                 afficher_message_fin()
+            afficher_message_fin()
 
 def afficher_message_bienvenue():
     """Affiche le message de bienvenue."""
-    # À implémenter.
       print("Bienvenue.")
 
 
 def afficher_message_fin():
     """Affiche le message de fin."""
-    # À implémenter.
    print("Fin de partie.")
 
 
-def reponse_oui_non(question):                                            #Albert
+def reponse_oui_non(question):                                           
     """Pose une question binaire (oui/non) à l'utilisateur qui répond
     soit 'o', soit 'n' (éventuellement 'O' ou 'N').
     La question est reposée tant que la réponse n'est pas comprise.
@@ -90,7 +92,7 @@ def reponse_oui_non(question):                                            #Alber
      else:
             return(False)
 
-def reponse_entier(question, vmin, vmax):                               #Gaëtan   #Albert
+def reponse_entier(question, vmin, vmax):                               
     """Pose une question à l'utilisateur dont la réponse est un entier
     compris dans l'intervalle [vmin ; vmax]. vmin >= 0.
     La question est reposée tant que la réponse n'est pas correcte.
