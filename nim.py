@@ -44,24 +44,10 @@ def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):                #Ga�
     :type ia_joueur_2: bool.
     """
 
-  afficher_message_bienvenue() 
-gagnant_dernier = ("Le gagnant est celui qui prends la dernière allumette ?")
-ia_joueur2 = ("Le joueur 2 est la machine?")
-liste = ["O","o","N","n"] 
-reponse = input(gagnant_dernier)
-reponse2 = inût(ia_joueur2) 
-while reponse not in liste:
-    reponse = input(gagnant_dernier)
-    if reponse == "Oui" or reponse == "oui":
-        ia_joueur2 = int(input("Le joueur 2 est la machine ?"))
-    else:
-        reponse = input(gagnant_dernier)
-while ia_joueur2 not in liste:
-        ia_joueur2 = input(ia_joueur2)
-    if reponse == "Oui" or reponse == "oui":
-            jouer()
-        else:
-            afficher_message_fin()
+ afficher_jeu(nombre_allumettes)
+reponse_entier("Combien voulez-vous retirer d'allumettes ?", 1, 100)
+while reponse_entier > nombre_allumette:
+        reponse_entier("Combien voulez-vous retirer d'allumettes ?", 1, 100)
 
 def afficher_message_bienvenue():
     """Affiche le message de bienvenue."""
