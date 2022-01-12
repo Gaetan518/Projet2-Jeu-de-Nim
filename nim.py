@@ -44,11 +44,16 @@ def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):                #GaÃ
     :type ia_joueur_2: bool.
     """
 
- afficher_jeu(nombre_allumettes)
-reponse_entier("Combien voulez-vous retirer d'allumettes ?", 1, 100)
-while reponse_entier > nombre_allumette:
-        reponse_entier("Combien voulez-vous retirer d'allumettes ?", 1, 100)
+ while nombre_allumettes != 0:
+        afficher_jeu(nombre_allumettes)
+        nombre_allumettes -= reponse_entier("Combien voulez-vous retirer d'allumettes ?", 1, 3)
+        afficher_jeu(nombre_allumettes)
+        if ia_joueur_2:
+            prise_ia(nombre_allumettes, gagnant_dernier)
+        else:
+            nombre_allumettes -= reponse_entier("Combien voulez-vous retirer d'allumettes ?", 1, 3)
 
+partie(10, True, False)
 def afficher_message_bienvenue():
     """Affiche le message de bienvenue."""
       print("Bienvenue.")
