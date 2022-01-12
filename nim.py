@@ -44,16 +44,22 @@ def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):                #Ga√
     :type ia_joueur_2: bool.
     """
 
- while nombre_allumettes != 0:
+  while nombre_allumettes != 0:
         afficher_jeu(nombre_allumettes)
+        print("Joueur 1 joue")
         nombre_allumettes -= reponse_entier("Combien voulez-vous retirer d'allumettes ?", 1, 3)
         afficher_jeu(nombre_allumettes)
+        print("Joueur 2 joue")
         if ia_joueur_2:
             prise_ia(nombre_allumettes, gagnant_dernier)
         else:
             nombre_allumettes -= reponse_entier("Combien voulez-vous retirer d'allumettes ?", 1, 3)
-
+        if gagnant_dernier:
+            print("Vous avez gagn√©")
+        else:
+            print("Vous avez perdu") 
 partie(10, True, False)
+
 def afficher_message_bienvenue():
     """Affiche le message de bienvenue."""
       print("Bienvenue.")
