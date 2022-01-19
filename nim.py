@@ -13,7 +13,7 @@ def afficher_jeu(nombre_allumettes):
         print ("|"*nombre_allumettes)
  
 
-def prise_ia(nombre_allumettes, gagnant_dernier):                #Matthias 
+def prise_ia(nombre_allumettes, gagnant_dernier):            
     """Implémentation de la statégie gagnante : donne le nombre
     d'allumettes à prendre en fonction de nombre restant et de la
     variante du jeu.
@@ -36,7 +36,7 @@ def prise_ia(nombre_allumettes, gagnant_dernier):                #Matthias
             return nombre_allumettes %4-1
 
 
-def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):                #Gaëtan   #Albert
+def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):                
     """Une seule partie du jeu de Nim.
 
     :param nombre_allumettes: nombre d'allumettes au début de la partie,
