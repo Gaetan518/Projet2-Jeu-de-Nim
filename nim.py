@@ -26,8 +26,14 @@ def prise_ia(nombre_allumettes, gagnant_dernier):                #Matthias
     :returns: nombre d'allumettes à prendre.
     :rtype: int.
     """
-  
-  
+    patch-1
+    if gagnant_dernier:
+        return nombre_allumettes %4
+    else:
+        if ((nombre_allumettes %4) == 0) | ((nombre_allumettes %4) == 1):
+            return 1
+        else:
+            return nombre_allumettes %4-1
 
 
 def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):                #Gaëtan   #Albert
