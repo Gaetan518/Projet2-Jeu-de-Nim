@@ -37,9 +37,6 @@ def prise_ia(nombre_allumettes, gagnant_dernier):                #Matthias
             return 1
         else:
             return nombre_allumettes %4-1
-for x in range(1, 15):
-  print(x, "allumettes",prise_ia(x,False))
-
 
 def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):                #Gaëtan
     """Une seule partie du jeu de Nim.
