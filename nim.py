@@ -1,17 +1,13 @@
 #! /usr/bin/env python3
 
 
-def afficher_jeu(nombre_allumettes):                 #Matthias 
+def afficher_jeu(nombre_allumettes):              
     """Affiche le plateau du jeu.
 
     :param nombre_allumettes: doit être positif ou nul.
     :type nombre_allumettes: int.
     """
-    def afficher_jeu(nombre_allumettes):                 #Matthias 
-    """Affiche le plateau du jeu.
-    :param nombre_allumettes: doit être positif ou nul.
-    :type nombre_allumettes: int.
-    """
+
     assert nombre_allumettes >=0, "nombre allumette inférieur à 0"
     if nombre_allumettes >=0 :
         print ("|"*nombre_allumettes)
@@ -30,6 +26,7 @@ def prise_ia(nombre_allumettes, gagnant_dernier):                #Matthias
     :returns: nombre d'allumettes à prendre.
     :rtype: int.
     """
+    patch-1
     if gagnant_dernier:
         return nombre_allumettes %4
     else:
@@ -38,7 +35,8 @@ def prise_ia(nombre_allumettes, gagnant_dernier):                #Matthias
         else:
             return nombre_allumettes %4-1
 
-def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):                #Gaëtan
+
+def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):                #Gaëtan   #Albert
     """Une seule partie du jeu de Nim.
 
     :param nombre_allumettes: nombre d'allumettes au début de la partie,
@@ -51,35 +49,36 @@ def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):                #Ga�
                   ou l'utilisateur (False).
     :type ia_joueur_2: bool.
     """
-    # À implémenter.
-  
-      nombre_allumettes = reponses_entier(question, vmin, vmax)
-    gagnant_dernier = int(input("Celui qui prends la dernière allumette est la gagnant?"))
-    for i in enumerate:
-        if "Oui" in gagnant_dernier:
-            print("Question suivante")
+
+  afficher_message_bienvenue()
+    while nombre_allumettes != 0:
+        afficher_jeu(nombre_allumettes)
+        print("Joueur 1 joue")
+        nombre_allumettes -= reponse_entier("Combien voulez-vous retirer d'allumettes ?", 1, 3)
+        afficher_jeu(nombre_allumettes)
+        print("Joueur 2 joue")
+        if ia_joueur_2:
+            prise_ia(nombre_allumettes, gagnant_dernier)
         else:
-            int(input("Celui qui prends la dernière allumette est la gagnant?"))
-    ia_joueur2 = int(input("Le joueur 2 est la machine ?")) 
-    for a in enumerate:
-            if "True" in ia_joueur2:
-                jouer()
-            else:
-                 afficher_message_fin()
+            nombre_allumettes -= reponse_entier("Combien voulez-vous retirer d'allumettes ?", 1, 3)
+        if gagnant_dernier:
+            print("Vous avez gagné")
+        else:
+            print("Vous avez perdu")
+afficher_message_fin()           
+partie(21, True, False)
 
 def afficher_message_bienvenue():
     """Affiche le message de bienvenue."""
-    # À implémenter.
       print("Bienvenue.")
 
 
 def afficher_message_fin():
     """Affiche le message de fin."""
-    # À implémenter.
    print("Fin de partie.")
 
 
-def reponse_oui_non(question):                                            #Albert
+def reponse_oui_non(question):                                           
     """Pose une question binaire (oui/non) à l'utilisateur qui répond
     soit 'o', soit 'n' (éventuellement 'O' ou 'N').
     La question est reposée tant que la réponse n'est pas comprise.
@@ -89,10 +88,16 @@ def reponse_oui_non(question):                                            #Alber
     :returns: la réponse sous forme de booléen.
     :rtype: bool.
     """
-    # À implémenter.
-  
+    liste = ["O,"o","N","n"]
+    reponse = input(question)
+    while reponse not in liste:
+            reponse = input(question)
+     if reponse == "O" or reponse == "o":
+            return(True)
+     else:
+            return(False)
 
-def reponse_entier(question, vmin, vmax):                               #Gaëtan   #Albert
+def reponse_entier(question, vmin, vmax):                               
     """Pose une question à l'utilisateur dont la réponse est un entier
     compris dans l'intervalle [vmin ; vmax]. vmin >= 0.
     La question est reposée tant que la réponse n'est pas correcte.
@@ -106,12 +111,14 @@ def reponse_entier(question, vmin, vmax):                               #Gaëtan
     :returns: l'entier choisi.
     :rtype: int.
     """
-    # À implémenter.
+    assert vmin >= 0, "vmin inférieur à 0" 
+    val = -1
+    while not vmin<=val<=vmax:
+        val = int(input(question))
+    print("Vous prenez",val,"allumettes")
+    return val    
+reponse_entier("Combien voulez-vous retirer d'allumettes ?", 1, 100) 
   
-    vmin >= 0
-    vmax >= vmin 
-    question = str(input("Entrez un nombre compris entre",vmin,"et",vmax))
-    return reponse_entier
 
 
 def jouer():
