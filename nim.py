@@ -88,7 +88,7 @@ def reponse_oui_non(question):
     :returns: la réponse sous forme de booléen.
     :rtype: bool.
     """
-    liste = ["O,"o","N","n"]
+    liste = ["O","o","N","n"]
     reponse = input(question)
     while reponse not in liste:
             reponse = input(question)
