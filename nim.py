@@ -51,6 +51,7 @@ def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):
     """
 
   afficher_message_bienvenue()
+    reponse_oui_non("Voulez-vous jouer au jeu de Nim ?")
     while nombre_allumettes != 0:
         afficher_jeu(nombre_allumettes)
         print("Joueur 1 joue")
@@ -64,9 +65,9 @@ def partie(nombre_allumettes, gagnant_dernier, ia_joueur_2):
         if gagnant_dernier:
             print("Vous avez gagné")
         else:
-            print("Vous avez perdu")
-afficher_message_fin()           
+            print("Vous avez perdu")          
 partie(21, True, False)
+afficher_message_fin()
 
 def afficher_message_bienvenue():
     """Affiche le message de bienvenue."""
